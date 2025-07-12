@@ -11,7 +11,11 @@ router.post("/", async (req, res) => {
     await task.save();
     res.status(201).json(task);
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    if (error instanceof Error) {
+      res.status(500).json({ message: error.message });
+    } else {
+      res.status(500).json({ message: String(error) });
+    }
   }
 });
 
@@ -21,7 +25,11 @@ router.get("/", async (req, res) => {
     const tasks = await Task.find();
     res.json(tasks);
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    if (error instanceof Error) {
+      res.status(500).json({ message: error.message });
+    } else {
+      res.status(500).json({ message: String(error) });
+    }
   }
 });
 
@@ -32,7 +40,11 @@ router.get("/:id", async (req, res) => {
     if (!task) return res.status(404).json({ message: "Task not found" });
     res.json(task);
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    if (error instanceof Error) {
+      res.status(500).json({ message: error.message });
+    } else {
+      res.status(500).json({ message: String(error) });
+    }
   }
 });
 
@@ -48,7 +60,11 @@ router.put("/:id", async (req, res) => {
     if (!task) return res.status(404).json({ message: "Task not found" });
     res.json(task);
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    if (error instanceof Error) {
+      res.status(500).json({ message: error.message });
+    } else {
+      res.status(500).json({ message: String(error) });
+    }
   }
 });
 
@@ -59,7 +75,11 @@ router.delete("/:id", async (req, res) => {
     if (!task) return res.status(404).json({ message: "Task not found" });
     res.json({ message: "Task deleted" });
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    if (error instanceof Error) {
+      res.status(500).json({ message: error.message });
+    } else {
+      res.status(500).json({ message: String(error) });
+    }
   }
 });
 
