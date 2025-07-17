@@ -33,4 +33,5 @@ Manage your daily tasks with **Create, Read, Update, Delete, and completion trac
 ### 1️⃣ Clone the repository
 
 git clone https://github.com/yourusername/task_manager.git
+\n
 cd task_manager
