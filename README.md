@@ -7,7 +7,6 @@ A **full stack Task Manager** built using:
 
 Manage your daily tasks with **Create, Read, Update, Delete, and completion tracking**.
 
----
 
 ## 🚀 Features
 
@@ -17,7 +16,6 @@ Manage your daily tasks with **Create, Read, Update, Delete, and completion trac
 ✅ Flutter frontend consuming your API  
 ✅ Clear, scalable folder structure
 
----
 
 ## 🛠️ Tech Stack
 
@@ -26,7 +24,6 @@ Manage your daily tasks with **Create, Read, Update, Delete, and completion trac
 - **Frontend:** Flutter
 - **Dev Tools:** VS Code, Postman / cURL, Git
 
----
 
 ## ⚡ Getting Started
 
